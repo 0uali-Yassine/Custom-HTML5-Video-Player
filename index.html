@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <title>Custom HTML5 Video Player</title>
+    <style>
+        @layer utilities{
+            .font-family{
+                font-family: 'Zilla Slab', serif;;
+            }
+        }
+    </style>
+</head>
+<body class="bg-blue-300">
+    <h1 class="text-[3rem]  font-bold font-family text-center">Custom HTML5 Video Player 🎥</h1>
+    <div class="all w-[60%] relative border-[1px] m-auto border-blue-500 overflow-hidden group">
+        <video src="/video.mp4/7 Micro-Habits That Will Completely Change Your Life in a Year.mp4" width="100%" height="auto" class="viewr"></video>
+        <div class="player w-full flex flex-col absolute bottom-[-29px] group-hover:bottom-0">
+            <div class="progress w-full h-[9px] bg-[#838282] cursor-pointer">
+                <div class="progressFilled h-full w-[100px] bg-blue-500"></div>
+            </div>
+            <div class="btn_inputs flex w-full justify-between">
+                <button class="btnPlay">▶</button>
+                <input type="range" name="volume" min="0" max="1" step="0.05" value="1">
+                <input type="range" name="playbackRate" min="0.5" max="2" step="0.5" value="1">
+                <div class="btn w-[100px ] self-center">
+                    <button data-skip="-10" class="btn-player">⏪</button>
+                    <button data-skip="25" class="btn-player"> ⏩</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
